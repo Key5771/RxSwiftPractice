@@ -6,6 +6,10 @@ public func example(of description: String, action: () -> Void) {
     action()
 }
 
+enum MyError: Error {
+    case anError
+}
+
 example(of: "just, of, from") {
     let one = 1
     let two = 2
@@ -91,6 +95,8 @@ example(of: "create") {
     
     Observable<String>.create { observer in
         observer.onNext("1")
+        
+//        observer.onError(MyError.anError)
         
         observer.onCompleted()
         
