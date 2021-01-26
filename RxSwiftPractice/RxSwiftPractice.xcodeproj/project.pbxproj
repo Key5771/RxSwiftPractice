@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -60,6 +60,7 @@
 		EAC1AE4325BFDCCF00B5F5C7 /* RxSwiftPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC1AE4725BFDCCF00B5F5C7 /* RxSwiftPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftPracticeUITests.swift; sourceTree = "<group>"; };
 		EAC1AE4925BFDCCF00B5F5C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC1AE6625BFDE4700B5F5C7 /* RxSwiftPractice.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftPractice.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F4CD0AA7E75F9DD80A8F9A01 /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +102,6 @@
 				38486AAD7C1BF440EB9F266E /* Pods-RxSwiftPracticeTests.debug.xcconfig */,
 				6F6E857954C01E5075EAE270 /* Pods-RxSwiftPracticeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -118,6 +118,7 @@
 		EAC1AE1925BFDCC300B5F5C7 = {
 			isa = PBXGroup;
 			children = (
+				EAC1AE6625BFDE4700B5F5C7 /* RxSwiftPractice.playground */,
 				EAC1AE2425BFDCC300B5F5C7 /* RxSwiftPractice */,
 				EAC1AE3B25BFDCCF00B5F5C7 /* RxSwiftPracticeTests */,
 				EAC1AE4625BFDCCF00B5F5C7 /* RxSwiftPracticeUITests */,
