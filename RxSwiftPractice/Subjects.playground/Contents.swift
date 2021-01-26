@@ -10,6 +10,7 @@ enum MyError: Error {
     case anError
 }
 
+// MARK: - PublishSubject
 example(of: "PublishSubject") {
     let subject = PublishSubject<String>()
     
@@ -48,7 +49,7 @@ example(of: "PublishSubject") {
     subject.onNext("?")
 }
 
-
+// MARK: - BehaviorSubject
 func print<T: CustomStringConvertible>(label: String, event: Event<T>) {
     print(label, (event.element ?? event.error) ?? event)
 }
@@ -68,4 +69,32 @@ example(of: "Behavior") {
     subject.subscribe {
         print(label: "2)", event: $0)
     }.disposed(by: dispostBag)
+}
+
+
+// MARK: - ReplaySubject
+example(of: "ReplaySubject") {
+    let subject = ReplaySubject<String>.create(bufferSize: 2)
+    let disposeBag = DisposeBag()
+    
+    subject.onNext("1")
+    subject.onNext("2")
+    subject.onNext("3")
+    
+    subject.subscribe {
+        print(label: "1)", event: $0)
+    }.disposed(by: disposeBag)
+    
+    subject.subscribe {
+        print(label: "2)", event: $0)
+    }.disposed(by: disposeBag)
+    
+    subject.onNext("4")
+    
+    subject.onError(MyError.anError)
+    subject.dispose()
+    
+    subject.subscribe {
+        print(label: "3)", event: $0)
+    }.disposed(by: disposeBag)
 }
