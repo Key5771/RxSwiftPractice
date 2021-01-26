@@ -110,3 +110,29 @@ example(of: "create") {
         onDisposed: { print("Disposed") }
     ).disposed(by: disposeBag)
 }
+
+
+example(of: "deferred") {
+    let disposeBag = DisposeBag()
+    
+    var flip = false
+    
+    let factory : Observable<Int> = Observable<Int>.deferred {
+        flip.toggle()
+        
+        if flip {
+            return Observable.of(1, 2, 3)
+        } else {
+            return Observable.of(4, 5, 6)
+        }
+    }
+    
+    for _ in 0...3 {
+        factory.subscribe(onNext: {
+            print($0, terminator: "")
+        }).disposed(by: disposeBag)
+        
+        print()
+    }
+}
+
