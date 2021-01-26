@@ -26,10 +26,14 @@ example(of: "subscribe") {
     let three = 3
     
     let observable = Observable.of(one, two, three)
-    observable.subscribe { event in
+//    observable.subscribe { event in
 //        print(event) // next(1), next(2), next(3) 출력
-        if let element = event.element {
-            print(element) // 1, 2, 3 출력
-        }
-    }
+//        if let element = event.element {
+//            print(element) // 1, 2, 3 출력
+//        }
+//    }
+    
+    observable.subscribe(onNext: { element in
+        print(element)
+    })
 }
