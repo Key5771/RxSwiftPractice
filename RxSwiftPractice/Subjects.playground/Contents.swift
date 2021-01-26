@@ -6,6 +6,10 @@ public func example(of description: String, action: () -> Void) {
     action()
 }
 
+enum MyError: Error {
+    case anError
+}
+
 example(of: "PublishSubject") {
     let subject = PublishSubject<String>()
     
@@ -42,4 +46,26 @@ example(of: "PublishSubject") {
     }.disposed(by: disposeBag)
     
     subject.onNext("?")
+}
+
+
+func print<T: CustomStringConvertible>(label: String, event: Event<T>) {
+    print(label, (event.element ?? event.error) ?? event)
+}
+
+example(of: "Behavior") {
+    let subject = BehaviorSubject(value: "Initial value")
+    let dispostBag = DisposeBag()
+    
+    subject.onNext("X")
+    
+    subject.subscribe {
+        print(label: "1)", event: $0)
+    }.disposed(by: dispostBag)
+    
+    subject.onError(MyError.anError)
+    
+    subject.subscribe {
+        print(label: "2)", event: $0)
+    }.disposed(by: dispostBag)
 }
