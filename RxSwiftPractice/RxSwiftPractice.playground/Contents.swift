@@ -37,3 +37,23 @@ example(of: "subscribe") {
         print(element)
     })
 }
+
+example(of: "empty") {
+    let observable = Observable<Void>.empty()
+    
+    observable.subscribe(onNext: { element in
+        print(element)
+    }, onCompleted: {
+        print("Completed")
+    })
+}
+
+example(of: "never") {
+    let observable = Observable<Any>.never()
+    
+    observable.subscribe(onNext: { element in
+        print(element)
+    }, onCompleted: {
+        print("Completed")
+    })
+}
