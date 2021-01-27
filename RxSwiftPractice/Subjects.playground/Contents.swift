@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 public func example(of description: String, action: () -> Void) {
     print("\n--- Example of:", description, "---")
@@ -97,4 +98,42 @@ example(of: "ReplaySubject") {
     subject.subscribe {
         print(label: "3)", event: $0)
     }.disposed(by: disposeBag)
+}
+
+
+// MARK: - PublishRelay
+
+example(of: "PublishRelay") {
+    let relay = PublishRelay<String>()
+    let disposeBag = DisposeBag()
+    
+    relay.accept("Knock knock, anyone home?")
+    relay.subscribe(onNext: {
+        print($0)
+    }).disposed(by: disposeBag)
+    
+    relay.accept("1")
+}
+
+// MARK: - BehaviorRelay
+
+example(of: "BehaviorRelay") {
+    let relay = BehaviorRelay(value: "Initial value")
+    let disposeBag = DisposeBag()
+    
+    relay.accept("New initial value")
+    
+    relay.subscribe {
+        print(label: "1)", event: $0)
+    }.disposed(by: disposeBag)
+    
+    relay.accept("1")
+    
+    relay.subscribe {
+        print(label: "2)", event: $0)
+    }.disposed(by: disposeBag)
+    
+    relay.accept("2")
+    
+    print("relay value: \(relay.value)")
 }
