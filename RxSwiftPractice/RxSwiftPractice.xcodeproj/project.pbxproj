@@ -18,6 +18,9 @@
 		EAC1AE3225BFDCCF00B5F5C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC1AE3025BFDCCF00B5F5C7 /* LaunchScreen.storyboard */; };
 		EAC1AE3D25BFDCCF00B5F5C7 /* RxSwiftPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1AE3C25BFDCCF00B5F5C7 /* RxSwiftPracticeTests.swift */; };
 		EAC1AE4825BFDCCF00B5F5C7 /* RxSwiftPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1AE4725BFDCCF00B5F5C7 /* RxSwiftPracticeUITests.swift */; };
+		EAC1AE7725C151C100B5F5C7 /* UIImage+Collage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1AE7625C151C100B5F5C7 /* UIImage+Collage.swift */; };
+		EAC1AE8125C1599F00B5F5C7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1AE8025C1599F00B5F5C7 /* PhotoCell.swift */; };
+		EAC1AE9325C16A8000B5F5C7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1AE9225C16A8000B5F5C7 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		EAC1AE4925BFDCCF00B5F5C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC1AE6625BFDE4700B5F5C7 /* RxSwiftPractice.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftPractice.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EAC1AE7225BFF8C000B5F5C7 /* Subjects.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subjects.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EAC1AE7625C151C100B5F5C7 /* UIImage+Collage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Collage.swift"; sourceTree = "<group>"; };
+		EAC1AE8025C1599F00B5F5C7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		EAC1AE9225C16A8000B5F5C7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F4CD0AA7E75F9DD80A8F9A01 /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +156,9 @@
 				EAC1AE2E25BFDCCF00B5F5C7 /* Assets.xcassets */,
 				EAC1AE3025BFDCCF00B5F5C7 /* LaunchScreen.storyboard */,
 				EAC1AE3325BFDCCF00B5F5C7 /* Info.plist */,
+				EAC1AE7625C151C100B5F5C7 /* UIImage+Collage.swift */,
+				EAC1AE8025C1599F00B5F5C7 /* PhotoCell.swift */,
+				EAC1AE9225C16A8000B5F5C7 /* PhotosViewController.swift */,
 			);
 			path = RxSwiftPractice;
 			sourceTree = "<group>";
@@ -431,6 +440,9 @@
 				EAC1AE2A25BFDCC300B5F5C7 /* ViewController.swift in Sources */,
 				EAC1AE2625BFDCC300B5F5C7 /* AppDelegate.swift in Sources */,
 				EAC1AE2825BFDCC300B5F5C7 /* SceneDelegate.swift in Sources */,
+				EAC1AE9325C16A8000B5F5C7 /* PhotosViewController.swift in Sources */,
+				EAC1AE7725C151C100B5F5C7 /* UIImage+Collage.swift in Sources */,
+				EAC1AE8125C1599F00B5F5C7 /* PhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
